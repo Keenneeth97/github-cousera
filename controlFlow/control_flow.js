@@ -6,6 +6,8 @@ let userType = "subscriber";
 let userCategory;
 let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
+let person = "Employee"
+let authorized;
 
 if (userRole === "admin") {
     accessLevel = "Full access granted";
@@ -39,7 +41,25 @@ switch (userType) {
         userCategory = "Unknown";
 }
 
+switch (person) {
+    case "Employee":
+        authorized = "Dietary Services";
+        break;
+    case "Enrolled Member":
+        authorized = "Dietary Services";
+        break;
+    case "Subscriber":
+        authorized = "Dietary Services";
+        break;
+    case "Non-Subscriber":
+        authorized = "Need subscription";
+        break;
+    default:
+        authorized = "Unknown";
+}
+
 console.log("Access Level:", accessLevel);
 console.log("User Message:", userMessage);
 console.log("User Category:", userCategory);
 console.log("Authentication Status:", authenticationStatus);
+console.log("Dietary Services:", authorized)
