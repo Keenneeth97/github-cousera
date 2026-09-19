@@ -1,5 +1,11 @@
 let count = 0;
 
+function resetCount() {
+    count = 0;
+    displayCount();
+    alert("Followers count has been reset!");
+}
+
 function increaseCount() {
     count++;
     displayCount();
